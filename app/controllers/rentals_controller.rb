@@ -15,7 +15,7 @@ class RentalsController < ApplicationController
 
   # GET /rentals/1
   def show
-    @rental = Rental.where(rental_id: params[:rental_id])
+    @rental = Rental.find(params[:id])
     render json: @rental
   end
 
